@@ -6,7 +6,7 @@ Installation
 
 1. Install `check.bkp.sh` in your Script directory of your Zabbix host. Check your `zabbix_agentd.conf.
 2. Then chmod a+x `check.bkp.sh`
-
+3. For Zabbix User you can allow execute some command (cat, sudo) in /etc/sudoers
 ### Requirements
 
 This script was tested for Zabbix 2.0.0 or higher.
