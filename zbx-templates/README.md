@@ -23,7 +23,7 @@ Templates
   * [ZBX-DRBD](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-drbd) => template to manage [DRBD](http://www.drbd.org) ressources.
   * [ZBX-VMWARE](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-vmware) => template to manage VMware vCenter (both vCSA and Windows server)
   * [ZBX-DELL-COMPELLENT](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-dell-compellent) => template to discover and manage capabilities on Compellent storage array.
-  * [ZBX-IOSTAT](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-iostat => template to discover and collect stats of (system/hard) disks.
+  * [ZBX-IOSTAT](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-iostat) => template to discover and collect stats of (system/hard) disks.
 Requirements
 ------------
 
