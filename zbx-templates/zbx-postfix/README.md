@@ -22,7 +22,7 @@ Postfix Template
 
 		EnableRemoteCommands=1
 - postfix.conf - the contents of this file should be placed in the configuration file zabbix agent, or putting the directory configuration that is specified in the main configuration options Include agent.For example */etc/zabbix/zabbix_agentd.d*
-- scripts postfix-zabbix-stats.sh working script should be copied to /etc/zabbix/script/.Here you can also use your comfortable accommodation, but in this case do not forget to improve the way the parameters defined in postfix.conf.
+- script [`postfix-zabbix-stats.sh`](https://github.com/dma-vitch/Zabbix/blob/master/zbx-scripts/postfix.check/postfix-zabbix-stats.sh) in the script directory of your Zabbix agent. working script should be copied to /etc/zabbix/script/.Here you can also use your comfortable accommodation, but in this case do not forget to improve the way the parameters defined in postfix.conf.
 Do not forget to check that they are executable (mode = 755).
 - edit crontab entry to periodically update the stats file the following lines:
 	
