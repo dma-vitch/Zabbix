@@ -1,4 +1,4 @@
-check.bkp.sh
+solr-pypoll.py
 ===========
 
 Installation
