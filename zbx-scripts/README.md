@@ -21,7 +21,8 @@ Scripts
   * [gandi.check](https://github.com/dma-vitch/Zabbix/tree/master/zbx-scripts/gandi.check) => script  query Gandi API to manage domain and certificate.
   * [vsphere.check](https://github.com/dma-vitch/Zabbix/tree/master/zbx-scripts/vsphere.check) => script  query vSphere API to manage VMWARE Infrastructure.
   * [chk.bkp](https://github.com/dma-vitch/Zabbix/tree/master/zbx-scripts/chk.bkp) => script check logs for error on current day.
-
+  * [solr.discovery](https://github.com/dma-vitch/Zabbix/tree/master/zbx-scripts/solr.discovery) => script auto-discovery core in Solr.
+  
 Requirements
 ------------
 
