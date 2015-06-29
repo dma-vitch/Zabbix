@@ -1,4 +1,4 @@
-zabbix-java-tomcat
+zabbix-java-jmx
 ==================
 
 Requirement:
