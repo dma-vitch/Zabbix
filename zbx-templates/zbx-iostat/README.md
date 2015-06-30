@@ -36,7 +36,20 @@ Installation notes
 
 - iostat.conf - the contents of this file should be placed in the configuration file zabbix agent, or putting the directory configuration that is specified in the main configuration options Include agent.
 for example /etc/zabbix/zabbix_agentd.d
-- scripts iostat-collect.sh and iostat-parse.sh - the two working script should be copied to /etc/zabbix/script/.Here you can also use your comfortable accommodation, but in this case do not forget to improve the way the parameters defined in iostat.conf.
+- scripts iostat-collect.sh and iostat-parse.sh - the two working script should be copied to `/etc/zabbix/script/`. Here you can also use your comfortable accommodation, but in this case do not forget to improve the way the parameters defined in iostat.conf.
 Do not forget to check that they are executable (mode = 755).
+- Edit zabbix agent check Timeout in configuration file change on 30 second( by default is 3)
+`
+# vi /etc/zabbix/zabbix_agentd.conf
+`
+```
+### Option: Timeout
+#       Spend no more than Timeout seconds on processing
+#
+# Mandatory: no
+# Range: 1-30
+# Default:
+Timeout=30
+```
 - Import template into web frontend.
 - Link template with monitoring hosts.
