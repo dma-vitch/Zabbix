@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Iostat-Disk-Utilization-Template</template>
-            <name>Iostat-Disk-Utilization-Template</name>
+            <template>zbx-Iostat-Disk-Utilization-Template</template>
+            <name>zbx-Iostat-Disk-Utilization-Template</name>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -628,7 +628,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},await]</key>
                                     </item>
                                 </graph_item>
@@ -640,7 +640,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},r_await]</key>
                                     </item>
                                 </graph_item>
@@ -652,7 +652,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},w_await]</key>
                                     </item>
                                 </graph_item>
@@ -684,7 +684,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},rrqm/s]</key>
                                     </item>
                                 </graph_item>
@@ -696,7 +696,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},wrqm/s]</key>
                                     </item>
                                 </graph_item>
@@ -728,7 +728,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},avgqu-sz]</key>
                                     </item>
                                 </graph_item>
@@ -740,7 +740,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},avgrq-sz]</key>
                                     </item>
                                 </graph_item>
@@ -772,7 +772,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},wkb/s]</key>
                                     </item>
                                 </graph_item>
@@ -784,7 +784,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},rkb/s]</key>
                                     </item>
                                 </graph_item>
@@ -816,7 +816,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},w/s]</key>
                                     </item>
                                 </graph_item>
@@ -828,7 +828,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},util]</key>
                                     </item>
                                 </graph_item>
@@ -840,7 +840,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>Iostat-Disk-Utilization-Template</host>
+                                        <host>zbx-Iostat-Disk-Utilization-Template</host>
                                         <key>iostat.metric[{#HARDDISK},r/s]</key>
                                     </item>
                                 </graph_item>
@@ -857,7 +857,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Iostat-Disk-Utilization-Template:iostat.collect.last(0)}=1</expression>
+            <expression>{zbx-Iostat-Disk-Utilization-Template:iostat.collect.last(0)}=1</expression>
             <name>Iostat statistics not collected on {HOSTNAME}</name>
             <url/>
             <status>0</status>
