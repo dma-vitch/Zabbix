@@ -27,7 +27,7 @@ Templates
   * [ZBX-TOMCAT-7-JMX](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-tomcat-7-jmx) => template to collect stats of Tomcat.
   * [ZBX-SOLR-MULTICORE-JMX](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-solr-multicore) => template to collect stats of Solr.
   * [ZBX-JAVA-JMX](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-java-jmx) => template to collect stats of Java.
-  * [ZBX-JAVA-JMX](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-squid3) => template to collect stats of Squid.
+  * [ZBX-SQUID](https://github.com/dma-vitch/Zabbix/tree/master/zbx-templates/zbx-squid3) => template to collect stats of Squid.
 
 Requirements
 ------------
