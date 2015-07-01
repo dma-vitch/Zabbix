@@ -4,6 +4,7 @@ Linux zbx-shell-squid Template
 Requirement:
 ------------
 Version of Squid (2.0 or higher).
+
 Version of Zabbix (2.0 or higher).
 
 Features:
@@ -55,6 +56,3 @@ for example `/etc/zabbix/zabbix_agentd.d`
 Usage:
 ------
 for test
-`
-
-`
