@@ -11,29 +11,29 @@ Features:
 
 When applying the template to a host Zabbix collects the following items:
 
-- cacheClientHttpRequests
+- cacheClientHttpRequests -
 Number of HTTP requests per second received.
-- cacheCpuUsage
+- cacheCpuUsage -
 The percentage use of the CPU.
-- cacheHttpAllSvcTime.5
+- cacheHttpAllSvcTime.5 -
 HTTP all service time. Median time over the last 5 minutes.
-- cacheHttpHitSvcTime.5
+- cacheHttpHitSvcTime.5 -
 HTTP hit service time. Median time over the last 5 minutes.
-- cacheHttpMissSvcTime.5
+- cacheHttpMissSvcTime.5 -
 HTTP miss service time. Median time over the last 5 minutes.
-- cacheMaxResSize
+- cacheMaxResSize -
 Maximum Resident Size in KB.
-- cacheMemPercent
+- cacheMemPercent -
 Calculated from cacheMemUsage and MaxResSize.
-- cacheMemUsage
+- cacheMemUsage -
  Total memory accounted for in KB.
-- cacheNumObjCount
+- cacheNumObjCount -
 Number of objects stored by the cache.
-- cacheRequestByteRatio.5
+- cacheRequestByteRatio.5 -
 Byte Hit Ratio. Median over the last 5 minutes.
-- cacheRequestHitRatio.5
+- cacheRequestHitRatio.5 -
 Request Hit Ratio. Median over the last 5 minutes.
-- cacheRequests
+- cacheRequests -
 All protocol cache requests per second.
 
 
@@ -111,4 +111,6 @@ snmp_outgoing_address 0.0.0.0
 Usage:
 ------
 for test
+`
 snmpget -v2c -c <community> -On -m +ALL -M+<MIB_DIRECTORY> <proxy>:3401  cacheCpuTime.0
+`
