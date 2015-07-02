@@ -46,13 +46,17 @@ The template defines three graphs:
 - The Squid_Timing graph shows you the timing for HTTP objects that were delivered after a cache hit, a cache miss and the mean value over all HTTP objects. In this graph you will see that objects from the cache are delivered much faster that objects that have to be fetched from the internet. The average time should be inbetween both curves. Sometimes you will see peaks in the graphs. This happens when large objects (that take their time) have to be fetched from the internet and very few other (easily retrieved) objects are requested. 
 - The Squid_Usage shows you the Memory and CPU usage (left axis) versus the incoming cache requests (right axis). This graph gives you a nice impression about the perfomance of your system. 
 
+Triggers
+---------------
+- Running out of file descriptors
+- Squid Process not running - check Squid status
+
 Installation notes
 ------------------
 - squid.conf - the contents of this file should be placed in the configuration file zabbix agent, or putting the directory configuration that is specified in the main configuration options Include agent.
 for example `/etc/zabbix/zabbix_agentd.d`
-- Import template into web frontend.
+- Import template into web front-end.
 - Link template with monitoring hosts.
 
 Usage:
 ------
-for test
