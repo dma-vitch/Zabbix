@@ -1,5 +1,5 @@
 # Script: Get-VBRJob
-# Author: Jean-Jacques Martrès (jjmartres |at| gmail |dot| com)
+# Author: Jean-Jacques Martrï¿½s (jjmartres |at| gmail |dot| com)
 # Description: Query Veeam job information
 # License: GPL2
 #
@@ -18,7 +18,7 @@
 # Add to Zabbix Agent
 #   UserParameter=vbr[*],%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -nologo -command "& C:\Zabbix\zabbix_vbr_job.ps1 $1 $2"
 #
-$version = "1.0.0"
+$version = "1.0.4"
 
 $ITEM = [string]$args[0]
 $ID = [string]$args[1]
@@ -26,12 +26,12 @@ $ID = [string]$args[1]
 #* Load Veeam snapin
 Add-PsSnapin -Name VeeamPSSnapIn -ErrorAction SilentlyContinue
 
-# Query VEEAM for Job
+# Query VEEAM for Job. Include only enabled jobs
 switch ($ITEM) {
   "Discovery" {
     # Open JSON object
     $output =  "{`"data`":["
-      $query = Get-VBRJob | Select-Object Id,Name, IsScheduleEnabled
+      $query = Get-VBRJob | Where-Object {$_.IsScheduleEnabled -eq "true"} | Select-Object Id,Name, IsScheduleEnabled
       $count = $query | Measure-Object
       $count = $count.count
       foreach ($object in $query) {
@@ -49,9 +49,9 @@ switch ($ITEM) {
     $output = $output + "]}"
     Write-Host $output
   }
-  "Status"  {
-  $query = Get-VBRJob | Where-Object {$_.Id -like "*$ID*"}
-    switch ([string]$query.GetLastResult()) {
+  "Result"  {
+  $query = Get-VBRJob | Where-Object {$_.Id -like "*$ID*" -and $_.IsScheduleEnabled -eq "true"}
+    if ($query) {switch ([string]$query.GetLastResult()) {
       "Failed" {
         return "0"
       }
@@ -61,7 +61,14 @@ switch ($ITEM) {
       default {
         return "2"
       }
+
     }
+  }
+    else {"2"}
+  }
+  "RunStatus" {
+  $query = Get-VBRJob | Where-Object {$_.Id -like "*$ID*"}
+  if ($query.IsRunning) { return "1" } else { return "0"}
   }
   "IncludedSize"{
   $query = Get-VBRJob | Where-Object {$_.Id -like "*$ID*"}
@@ -80,11 +87,11 @@ switch ($ITEM) {
   [string]$query.JobType
   }
   "RunningJob" {
-  $query = Get-VBRBackupSession | where { $_.isCompleted -eq $false }
+  $query = Get-VBRBackupSession | where { $_.isCompleted -eq $false } | Measure
   if ($query) {
 	[string]$query.Count
     } else {
-	0
+	return "0"
     }
   }
   default {
